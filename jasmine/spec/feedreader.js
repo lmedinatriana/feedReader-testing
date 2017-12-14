@@ -62,7 +62,7 @@ $(function() {
          */
         it("body has 'menu-hidden' by default", function() {
             
-            expect(body.className).toContain("menu-hidden");
+            expect(body.classList).toContain("menu-hidden");
         });
 
 
@@ -73,10 +73,10 @@ $(function() {
           */
         it("menu changes visibility when clicked", function() {
           menuIconLink.click();
-          expect(body.className).not.toContain("menu-hidden");
+          expect(body.classList).not.toContain("menu-hidden");
 
           menuIconLink.click();
-          expect(body.className).toContain("menu-hidden");
+          expect(body.classList).toContain("menu-hidden");
         });
     });
 
@@ -90,13 +90,12 @@ $(function() {
          * a single .entry element within the .feed container.
          */
         beforeEach(function(done) {
-            loadFeed(0, function() {
-                done();
-            });
+            loadFeed(0, done);
         });
 
         it('Has at least a single entry element within the feed container.', function() {
-            var numbEntry = $('.entry').length;
+        
+            var numbEntry = document.querySelectorAll(".feed .entry").length; 
             expect(numbEntry).toBeGreaterThan(0);
          });
     });
@@ -111,17 +110,13 @@ $(function() {
         beforeEach(function(done) {
           loadFeed(0, function() {
             initLoadedFeed = document.querySelector(".feed").innerHTML;
-
-            loadFeed(1, function() {
-              done();
-            });
+            loadFeed(1, done);
           });
         });
 
-        it("new feed is loaded and content changes", function(done) {
+        it("new feed is loaded and content changes", function() {
           var newLoadedFeed = document.querySelector(".feed").innerHTML;
           expect(initLoadedFeed).not.toBe(newLoadedFeed);
-          done();
         });
       });
 }());
