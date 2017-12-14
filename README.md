@@ -5,11 +5,11 @@ In this project you are given a web-based application that reads RSS feeds. The 
 
 ## Getting Started
 
-For this project, I had to create a map of my neighborhood using various APIs.
+For this project, I had to create and run couple of tests usin Jasmine.js to ensure the quality of the app.
 
 ## Running Instructions Locally
 
-1. To run a test, please [click here](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Flmedinatriana.github.io%2Fwebsite-optimization "Feedreader Testing")
+1. To run a test, please [click here](https://lmedinatriana.github.io/feedReader-testing/ "Feedreader Testing")
 3. Check for test results,
 
 
@@ -17,7 +17,7 @@ For this project, I had to create a map of my neighborhood using various APIs.
 
 1. Download folder.
 2. Unzip folder and open index.html on a browser.
-2. Check for test results,
+2. Check for the test results.
 
 ### Used Resources
 
@@ -28,4 +28,4 @@ For this project, I had to create a map of my neighborhood using various APIs.
 
 ## Authors
 
-* **Udacity** - *Initial JavaScript Testing* - [GitHub](https://www.udacity.com/course/javascript-testing--ud549)
+* **Udacity** - *Initial JavaScript Testing* - [GitHub](https://github.com/udacity/frontend-nanodegree-feedreader)
